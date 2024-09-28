@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block main %}
+    <nav class="index">
+        <ul>
+            <li><a href="project.html">Compiled Project</a></li>
+            <li><span>Chapters</span>
+                <ol>
+                    {% for chapter in S.chapters %}
+                        <li><a href="{{ chapter.target }}">{{ chapter.title }}</a></li>
+                    {% endfor %}
+                </ol>
+            </li>
+        </ul>
+    </nav>
+{% endblock %}
+
+{% block footer %}{% endblock %}
